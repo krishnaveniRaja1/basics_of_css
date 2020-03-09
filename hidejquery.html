@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>my first program</title>
+<script  type="text/javascript" src="jquery.min.js"></script>
+<style>
+#box{
+    color:red;
+}
+</style>
+</head>
+<body>
+<h1>Dhakshin Exports</h1>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+//$("#box").hide();});
+//$(this).hide();});
+//$("p:first").hide();});
+//$("p:last").hide();});
+//$("ul li:first-child").hide();});
+//$("ul li:last-child").hide();});
+//$("a").hide();});
+//$("a[target='_blank']").hide();});
+//$("a[target!='_blank']").hide();});
+//$(":text").hide();});
+//$(":radio").hide();});
+$("input").hide();});
+
+});
+</script>
+<p id="box">this is my website</p>
+<p>welcome to my website</p>
+<ul>
+    <li>c  <a href="#" target="_blank">readmore</a> </li>
+	<li>c++  <a href="#">readmore</a></li>
+	<li>javascript  <a href="#">readmore</a></li>
+</ul>
+<ul>
+    <li>html</li>
+	<li>css</li>
+	<li>c#</li>
+</ul>
+<form>
+name:<input type="text" name="name"><br>
+gender:<input type="radio" name"raja">male
+<input type="radio" name="raja">female
+</form>
+<button>click me to hide</button>
+</body>
+</html>
