@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>css</title>
+<script src="jquery.min.js" type="text/javascript"></script>
+<style type="text/css">
+.over{
+      background-color:#D55F8F;
+	  }
+</style>
+<script>
+$(document).ready(function(){
+     $("h1").css("color","#F54DA3");
+	$("#box").css({
+	    "color":"DE1B85",
+	    "background-color":"#FCF7EF",
+		 "width":"100%",
+		 "height":"300%",
+		 "border-radius":"5px",
+		 "text-align":"center",
+	     "font-size":"20px"
+	 });
+     $("td,th").css("padding","20px");
+	 $("#tab tr").mouseover(function(){
+	 //$("#tab tr:odd").addClass("over");
+	 $(this).addClass("over");
+	 });
+	 $("#tab tr").mouseout(function(){
+	 $(this).removeClass("over");
+	 });
+	 $("h2:first").css("color","red");
+	 $("h2:last").css("color","blue");
+	 $("p span:nth-child(2)").css("color","orange");
+	 $("#hide").click(function(){
+	 $("#para").hide("2000");
+	 });
+	 $("#show").click(function(){
+	 $("#para").show("2000");
+	 });
+	 $("#btn").click(function(){
+	 if($("#p2").is(':visible'))
+	 {
+	    $("#p2").fadeOut("1000");
+		$("#btn").val("show");
+	 }
+	 else
+	 {
+	    $("#p2").fadeIn("1000");
+		$("#btn").val("hide");
+	 }
+	 });   
+	   $("#but").bind('click',addition);
+	   $("#a").bind('keyup',type)
+              .bind('focus',input)
+	   $("#b").bind('focus',input2)
+	          .bind('keyup',type2);
+ });
+    function type()
+	{
+	$("#result").html("u r typing in first text box");
+	}
+	function type2()
+	{
+	$("#result").html("u r typing in second text box");
+	}
+	function input()
+	{
+	 $("#result").html("u r in first text box");
+	}
+	function input2()
+	{
+	  $("#result").html("u r in second text box");
+	}
+    function addition()
+	{
+	 var c = Number($("#a").val())+Number($("#b").val());
+	 $("#result").html(c);
+	}
+</script>
+</head>
+<body>
+<div id="box"><h1>welcome to my website</h1>
+<table id="tab"  border=1px; cellspacing :2px; cellpadding :20px>
+      <th>s.no</th>
+	  <th>name</th>
+	  <th>class</th>
+	  <tr>
+	  <td>1</td>
+	  <td>kicha</td>
+	  <td>1</td>
+	  </tr>
+	  <tr>
+	  <td>2</td>
+	  <td>raja</td>
+	  <td>1</td>
+	  </tr>
+	  <tr>
+	  <td>3</td>
+	  <td>sumathi</td>
+	  <td>1</td>
+	  </tr>
+</table>
+<h2>hello everyone</h2>
+<p>A paragraph (from the Ancient Greek<span> παράγραφος </span>paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a <span>particular point </span>or idea. A paragraph consists of <span>one or more </span>sentences.</p>
+<h2>hello everyone</h2>
+<p id="p2">A paragraph (from the Ancient Greek <span>παράγραφος </span>paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a <span>particular point </span>or idea. A paragraph consists of <span>one or more</span> sentences.</p>
+<input type="button" value="hidepara" id="btn">
+
+<h2>hello everyone</h2>
+<p id="para">A paragraph (from the Ancient Greek <span>παράγραφος </span>paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a <span>particular point </span>or idea. A paragraph consists of <span>one or more</span> sentences.</p>
+<button id="hide">hide</button>
+<button id="show">show</button><br>
+<h3>add two numbers</h3>
+first no<input type="text"  id="a" ><br>
+second no<input type="text"  id="b" ><br>
+<input type="button" id="but" value="calculte"><br>
+<p id="result">total</p>
+</div>
+</body>
+</html>
